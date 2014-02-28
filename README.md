@@ -11,11 +11,17 @@ Integrating with YII Framework
 Assumse that you have php5, apache2.2.x and all requirements that phpdocx needed.
 YII Version 1.1.14 (I am using 1.1.15-dev straight clone from github)
 
-+ Clone or extract this repo to: /protected/vendors/phpdocx
-+ The structure of directory should be /protected/vendors/phpdocx/classes etc...
++ Clone or extract this repo to:
+
+        /protected/vendors/phpdocx
+        
++ The structure of directory should be
+
+        /protected/vendors/phpdocx/classes etc...
+        
 + Add this line to: /protected/config/main.php
 
-	'import' => array(
+        'import' => array(
 		....
 		'application.vendors.phpdocx.classes.*', 
 		'application.vendors.phpdocx.lib.log4php.*',
@@ -26,9 +32,10 @@ YII Version 1.1.14 (I am using 1.1.15-dev straight clone from github)
 		'application.vendors.phpdocx.lib.log4php.layouts.*',
 		'application.vendors.phpdocx.lib.log4php.pattern.*',
 		'application.vendors.phpdocx.lib.log4php.renderers.*',
-		...
-	);
+		... 
+		);
 
+        
 + Create simple code to generate docx
 
 
@@ -51,9 +58,7 @@ YII Version 1.1.14 (I am using 1.1.15-dev straight clone from github)
 	        $docx->addText($text);
 	        $docx->createDocx($filename_target);
 	        spl_autoload_register(array('YiiBase', 'autoload'));
-	}
-	}
-	
+	        }
 
 
 Notes
@@ -65,8 +70,8 @@ Notes
 
 Credits
 -------
-Original by 2mdc.com (awesome works)
-Modified by @dika46 - @agungsijawir
++ Original by 2mdc.com (awesome works)
++ Modified by @dika46 - @agungsijawir
 
 License
 -------
